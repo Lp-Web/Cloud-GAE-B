@@ -46,6 +46,9 @@ public class ServletBooks extends HttpServlet {
             if(!service.removeUnitToBook(id, remove)) {
                 response.getWriter().println("The given id isn't registered");
                 response.setStatus(400);
+            } else {
+                response.getWriter().println("Ok");
+                response.setStatus(200);
             }
 
         } catch (NullPointerException ex) {
@@ -71,6 +74,9 @@ public class ServletBooks extends HttpServlet {
             if(!service.addUnitToBook(id, remove)) {
                 response.getWriter().println("The given id isn't registered");
                 response.setStatus(400);
+            } else {
+                response.getWriter().println("Ok");
+                response.setStatus(200);
             }
 
         } catch (NullPointerException ex) {
